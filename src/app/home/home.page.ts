@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+  ) {}
+
 
 }

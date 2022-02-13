@@ -1,5 +1,8 @@
+import { PrivateComponent } from './components/private/private.component';
+import { PublicComponent } from './components/public/public.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@auth0/auth0-angular';
 
 const routes: Routes = [
   {
@@ -8,8 +11,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'public',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 

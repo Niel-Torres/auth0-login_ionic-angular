@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "oauth-ionic",
-	"webDir": "www",
-	"bundledWebRuntime": false
+  "appId": "com.auth.heyapp",
+  "appName": "com.auth.heyapp",
+  "webDir": "www",
+  "bundledWebRuntime": false
 }

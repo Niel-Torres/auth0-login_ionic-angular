@@ -1,3 +1,38 @@
 <ion-app>
+
+
   <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-item>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Auth0</a>
+      </div>
+    </ion-item>
+
+
+
+    <div>
+      <!-- <ion-button color="primary" (click)="loginWithRedirect()" *ngIf="(auth.isAuthenticated$ | async)===false" >
+        Login
+      </ion-button>
+      <ion-button color="danger" (click)="logout()" *ngIf="auth.isAuthenticated$ | async" >
+        Logout
+      </ion-button> -->
+
+      <ion-button color="primary" (click)="login()" *ngIf="(auth.isAuthenticated$ | async)===false">
+        Login
+      </ion-button>
+      <ion-button color="danger" (click)="logout2()" *ngIf="auth.isAuthenticated$ | async">
+        Logout
+      </ion-button>
+    </div>
+
+
+    <ion-title>
+      <app-public *ngIf="(auth.isAuthenticated$ | async)===false"></app-public>
+      <app-private *ngIf="auth.isAuthenticated$ | async"></app-private>
+    </ion-title>
+
+  </ion-content>
+
 </ion-app>
